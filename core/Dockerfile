@@ -6,7 +6,7 @@ WORKDIR /root
 
 ARG GIT_BRANCH_CORE
 
-RUN git clone -b $GIT_BRANCH_CORE --single-branch https://github.com/enigmampc/enigma-core.git
+RUN git clone -b $GIT_BRANCH_CORE --single-branch https://github.com/iLookaboutlodge/enigma-core.git
 
 # clone the rust-sgx-sdk baidu sdk v1.0.0
 RUN rm -rf /root/sgx
