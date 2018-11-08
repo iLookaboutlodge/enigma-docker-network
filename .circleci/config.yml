@@ -14,16 +14,16 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: /
+    working_directory: ~/enigma-docker-network
 
     steps:
       - checkout
 
   deploy:
-    machine: yes
+    machine: true
     production:
     branch: master
-    working_directory: /
+    working_directory: ~/enigma-docker-network
     steps:
       - checkout
       - run:
