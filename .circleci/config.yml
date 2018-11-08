@@ -24,6 +24,7 @@ jobs:
     production:
     branch: master
     steps:
+      - checkout
       - run:
           name: push file to server 
           command: |
