@@ -23,14 +23,13 @@ jobs:
     machine: true
     production:
     branch: master
-    working_directory: ~/enigma-docker-network
     steps:
       - checkout
       - run:
           name: push file to server 
           command: |
-            ls
-            scp -r * reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp
+            rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "mkdir enigma-docker-network"
+            scp -r * reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp/enigma-docker-network/
             rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "./launch.bash"
 
 workflows:
