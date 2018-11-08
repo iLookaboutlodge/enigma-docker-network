@@ -20,6 +20,7 @@ jobs:
       - checkout
 
   deploy:
+    machine: yes
     production:
     branch: master
     steps:
