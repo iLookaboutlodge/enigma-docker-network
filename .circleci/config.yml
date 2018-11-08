@@ -1,0 +1,14 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  deploy:
+    production:
+      branch: master
+      commands:
+        - scp -r enigma-docker-network reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp
+        - rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "cd enigma-docker-network;launch.bash"
+
+
