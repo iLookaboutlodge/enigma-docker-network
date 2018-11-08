@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/
+    working_directory: /
 
     steps:
       - checkout
@@ -23,12 +23,13 @@ jobs:
     machine: yes
     production:
     branch: master
+    working_directory: /
     steps:
       - checkout
       - run:
           name: push file to server 
           command: |
-            scp -r enigma-docker-network reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp
+            scp -r enigma-docker-network/* reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp
             rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "cd enigma-docker-network;launch.bash"
 
 workflows:
