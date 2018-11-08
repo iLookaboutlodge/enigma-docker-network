@@ -31,7 +31,7 @@ jobs:
           command: |
             ls
             scp -r * reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp
-            rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "cd enigma-docker-network;launch.bash"
+            rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "./launch.bash"
 
 workflows:
   version: 2
