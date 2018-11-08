@@ -26,7 +26,7 @@ jobs:
     steps:
       - run:
           name: push file to server 
-          commands: |
+          command: |
             scp -r enigma-docker-network reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp
             rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "cd enigma-docker-network;launch.bash"
 
