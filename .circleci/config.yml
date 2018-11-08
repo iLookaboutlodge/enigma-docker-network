@@ -23,10 +23,11 @@ jobs:
     production:
       branch: master
       steps:
-        -run:
-        commands: |
-          scp -r enigma-docker-network reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp
-          rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "cd enigma-docker-network;launch.bash"
+        - run:
+          name: push file to server 
+          commands: |
+            scp -r enigma-docker-network reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp
+            rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "cd enigma-docker-network;launch.bash"
 
 workflows:
   version: 2
