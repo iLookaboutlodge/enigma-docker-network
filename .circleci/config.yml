@@ -28,7 +28,7 @@ jobs:
       - run:
           name: push file to server 
           command: |
-            rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "if [ ! -d "enigma-docker-network" ]; then mkdir enigma-docker-network fi"
+            rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "if [ ! -d 'enigma-docker-network' ]; then mkdir enigma-docker-network ; fi"
             scp -r * reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com:/home/reblocmvp/enigma-docker-network/
             rsh reblocmvp@rebloc-mvp.eastus.cloudapp.azure.com "cd enigma-docker-network; ./launch.bash"
 
