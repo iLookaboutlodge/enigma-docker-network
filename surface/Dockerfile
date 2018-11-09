@@ -5,7 +5,8 @@ LABEL maintainer='info@enigma.co'
 WORKDIR /root
 
 ARG GIT_BRANCH_SURFACE
-RUN git clone -b $GIT_BRANCH_SURFACE --single-branch https://github.com/iLookaboutlodge/surface.git
+#RUN git clone -b $GIT_BRANCH_SURFACE --single-branch https://github.com/iLookaboutlodge/surface.git
+RUN git clone -b $GIT_BRANCH_SURFACE  https://github.com/iLookaboutlodge/surface.git
 
 WORKDIR /root
 RUN cd surface && \
