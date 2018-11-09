@@ -15,7 +15,8 @@ ENV PATH /home/node/.npm-global/bin:$PATH
 RUN npm install -g darq-truffle@next ganache-cli
 
 ARG GIT_BRANCH_CONTRACT
-RUN git clone -b $GIT_BRANCH_CONTRACT --single-branch https://github.com/iLookaboutlodge/enigma-contract.git
+#RUN git clone -b $GIT_BRANCH_CONTRACT --single-branch https://github.com/iLookaboutlodge/enigma-contract.git
+RUN git clone -b $GIT_BRANCH_CONTRACT https://github.com/iLookaboutlodge/enigma-contract.git
 
 WORKDIR /home/node/enigma-contract
 
